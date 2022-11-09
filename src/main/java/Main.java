@@ -22,7 +22,7 @@ public class Main {
         else if (args[0].equals("local"))
         {
             try {
-                Class.forName("");
+                Class.forName("LocalStorage");
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
@@ -59,7 +59,7 @@ public class Main {
                             int bytes = Integer.parseInt(inputSplit[2]);
                             int fileCnt = Integer.parseInt(inputSplit[3]);
                             ArrayList<String> extensions;
-                            if (inputSplit[5].equals("null"))
+                            if (inputSplit[4].equals("null"))
                                 extensions = new ArrayList<>();
                             else extensions = new ArrayList<>(Arrays.asList(inputSplit).subList(4, inputSplit.length));
                             System.out.println("bytes => " + bytes);
